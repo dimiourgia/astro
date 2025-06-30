@@ -30,6 +30,8 @@ export default function BirthChartPage({ userId }: BirthChartPageProps) {
         title: "Success",
         description: "Birth chart generated successfully!"
       });
+      // Refetch the chart data after successful generation
+      window.location.reload();
     },
     onError: (error: any) => {
       toast({
@@ -40,19 +42,19 @@ export default function BirthChartPage({ userId }: BirthChartPageProps) {
     }
   });
 
-  // Auto-generate chart if not found
+  // Auto-generate chart if not found (run only once)
   useEffect(() => {
-    if (chartError && !generateChartMutation.isPending) {
+    if (chartError && !generateChartMutation.isPending && !chartData) {
       generateChartMutation.mutate();
     }
-  }, [chartError, generateChartMutation]);
+  }, [chartError]); // Removed generateChartMutation from dependencies to prevent infinite loop
 
   const startChat = () => {
     setLocation(`/main/${userId}`);
   };
 
   const goBack = () => {
-    setLocation(-1);
+    setLocation('/');
   };
 
   if (chartLoading || generateChartMutation.isPending) {

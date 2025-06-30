@@ -73,6 +73,7 @@ export default function RegistrationPage() {
                           placeholder="+1 (555) 123-4567"
                           {...field}
                           className="cosmic-input placeholder-gray-400"
+                          style={{ color: 'white', backgroundColor: 'rgba(13, 22, 35, 0.8)' }}
                         />
                       </FormControl>
                       <FormMessage />

@@ -99,6 +99,7 @@ export default function UserDetailsPage({ phone }: UserDetailsPageProps) {
                           placeholder="Enter your full name"
                           {...field}
                           className="cosmic-input placeholder-gray-400"
+                          style={{ color: 'white', backgroundColor: 'rgba(13, 22, 35, 0.8)' }}
                         />
                       </FormControl>
                       <FormMessage />
@@ -117,6 +118,7 @@ export default function UserDetailsPage({ phone }: UserDetailsPageProps) {
                           type="date"
                           {...field}
                           className="cosmic-input"
+                          style={{ color: 'white', backgroundColor: 'rgba(13, 22, 35, 0.8)' }}
                         />
                       </FormControl>
                       <FormMessage />
@@ -136,6 +138,7 @@ export default function UserDetailsPage({ phone }: UserDetailsPageProps) {
                           {...field}
                           disabled={unknownTime}
                           className="cosmic-input"
+                          style={{ color: 'white', backgroundColor: 'rgba(13, 22, 35, 0.8)' }}
                         />
                       </FormControl>
                       <div className="mt-2">
@@ -167,6 +170,7 @@ export default function UserDetailsPage({ phone }: UserDetailsPageProps) {
                           placeholder="City, Country"
                           {...field}
                           className="cosmic-input placeholder-gray-400"
+                          style={{ color: 'white', backgroundColor: 'rgba(13, 22, 35, 0.8)' }}
                         />
                       </FormControl>
                       <FormMessage />

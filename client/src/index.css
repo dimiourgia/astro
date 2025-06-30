@@ -95,9 +95,13 @@
   }
 
   .cosmic-input {
-    background: hsla(210, 40%, 8%, 0.5);
+    background: hsla(210, 40%, 8%, 0.8);
     border: 1px solid hsla(257, 50%, 30%, 0.4);
-    color: var(--cosmic-light);
+    color: white !important;
+  }
+  
+  .cosmic-input::placeholder {
+    color: rgb(156, 163, 175) !important;
   }
 
   .cosmic-input:focus {
