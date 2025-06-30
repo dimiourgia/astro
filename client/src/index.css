@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+
+  /* Cosmic theme colors */
+  --cosmic-dark: hsl(210, 40%, 8%);
+  --cosmic-navy: hsl(220, 39%, 11%);
+  --cosmic-purple: hsl(257, 50%, 30%);
+  --cosmic-gold: hsl(43, 96%, 56%);
+  --cosmic-light: hsl(210, 40%, 98%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background: linear-gradient(135deg, var(--cosmic-dark) 0%, var(--cosmic-navy) 50%, var(--cosmic-purple) 100%);
+    color: var(--cosmic-light);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .cosmic-gradient {
+    background: linear-gradient(135deg, var(--cosmic-dark) 0%, var(--cosmic-navy) 50%, var(--cosmic-purple) 100%);
+  }
+  
+  .chat-gradient {
+    background: linear-gradient(to right, var(--cosmic-purple), hsl(262, 83%, 58%));
+  }
+  
+  .star-field {
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, hsl(0, 0%, 93%), transparent),
+      radial-gradient(2px 2px at 40px 70px, hsla(0, 0%, 100%, 0.8), transparent),
+      radial-gradient(1px 1px at 90px 40px, hsl(0, 0%, 100%), transparent),
+      radial-gradient(1px 1px at 130px 80px, hsla(0, 0%, 100%, 0.6), transparent),
+      radial-gradient(2px 2px at 160px 30px, hsl(0, 0%, 100%), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+  }
+
+  .cosmic-card {
+    background: hsla(220, 39%, 11%, 0.5);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsla(257, 50%, 30%, 0.3);
+  }
+
+  .cosmic-input {
+    background: hsla(210, 40%, 8%, 0.5);
+    border: 1px solid hsla(257, 50%, 30%, 0.4);
+    color: var(--cosmic-light);
+  }
+
+  .cosmic-input:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: var(--cosmic-gold);
+    border-color: transparent;
+  }
+
+  .cosmic-button {
+    background: linear-gradient(to right, var(--cosmic-purple), hsl(262, 83%, 58%));
+    color: white;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+
+  .cosmic-button:hover {
+    background: linear-gradient(to right, hsla(257, 50%, 30%, 0.9), hsla(262, 83%, 58%, 0.9));
+    transform: scale(1.02);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cosmic-navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cosmic-purple);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cosmic-gold);
+}

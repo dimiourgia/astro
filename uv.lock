@@ -1,0 +1,67 @@
+version = 1
+requires-python = ">=3.11"
+
+[[package]]
+name = "flatlib"
+version = "0.2.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pyswisseph" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f0/7f/57832c230ec71bffe1dbae08b3e87331e2b17e76585c85ca79dd7284e91a/flatlib-0.2.3.tar.gz", hash = "sha256:46cc956b936aa31a96082cff23448a5c27dd6e5e434a6293bc9265336c00dd5d", size = 5755027 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/85/79/c00d124a1dc370095702c5bd77d8c683f0f67cfc59303f0222d93056c48e/flatlib-0.2.3-py3-none-any.whl", hash = "sha256:c846d83c965db7588581bb65ac9a6668b9a190afcad5027269f7e9c75f467bcd", size = 5762227 },
+]
+
+[[package]]
+name = "geographiclib"
+version = "2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/96/cd/90271fd195d79a9c2af0ca21632b297a6cc3e852e0413a2e4519e67be213/geographiclib-2.0.tar.gz", hash = "sha256:f7f41c85dc3e1c2d3d935ec86660dc3b2c848c83e17f9a9e51ba9d5146a15859", size = 36720 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9f/5a/a26132406f1f40cf51ea349a5f11b0a46cec02a2031ff82e391c2537247a/geographiclib-2.0-py3-none-any.whl", hash = "sha256:6b7225248e45ff7edcee32becc4e0a1504c606ac5ee163a5656d482e0cd38734", size = 40324 },
+]
+
+[[package]]
+name = "geopy"
+version = "2.4.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "geographiclib" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/0e/fd/ef6d53875ceab72c1fad22dbed5ec1ad04eb378c2251a6a8024bad890c3b/geopy-2.4.1.tar.gz", hash = "sha256:50283d8e7ad07d89be5cb027338c6365a32044df3ae2556ad3f52f4840b3d0d1", size = 117625 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e5/15/cf2a69ade4b194aa524ac75112d5caac37414b20a3a03e6865dfe0bd1539/geopy-2.4.1-py3-none-any.whl", hash = "sha256:ae8b4bc5c1131820f4d75fce9d4aaaca0c85189b3aa5d64c3dcaf5e3b7b882a7", size = 125437 },
+]
+
+[[package]]
+name = "pyswisseph"
+version = "2.8.0.post1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/8d/63/a0373099b5e888a2ad42d3f1668893e42afb4655dbc5ba06e0b615005eb4/pyswisseph-2.08.00-1.tar.gz", hash = "sha256:6b4818c0224d309c0b01f3c52df2432900dddcde345364408d99eafc9cdd1e71", size = 521573 }
+
+[[package]]
+name = "pytz"
+version = "2025.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f8/bf/abbd3cdfb8fbc7fb3d4d38d320f2441b1e7cbe29be4f23797b4a2b5d8aac/pytz-2025.2.tar.gz", hash = "sha256:360b9e3dbb49a209c21ad61809c7fb453643e048b38924c765813546746e81c3", size = 320884 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/81/c4/34e93fe5f5429d7570ec1fa436f1986fb1f00c3e0f43a589fe2bbcd22c3f/pytz-2025.2-py2.py3-none-any.whl", hash = "sha256:5ddf76296dd8c44c26eb8f4b6f35488f3ccbf6fbbd7adee0b7262d43f0ec2f00", size = 509225 },
+]
+
+[[package]]
+name = "repl-nix-workspace"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "flatlib" },
+    { name = "geopy" },
+    { name = "pytz" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "flatlib", specifier = ">=0.2.3" },
+    { name = "geopy", specifier = ">=2.4.1" },
+    { name = "pytz", specifier = ">=2025.2" },
+]
