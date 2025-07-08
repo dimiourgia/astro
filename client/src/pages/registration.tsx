@@ -70,7 +70,7 @@ export default function RegistrationPage() {
                       <FormLabel className="text-gray-200">Phone Number</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="+1 (555) 123-4567"
+                          placeholder="+91 6397710583"
                           {...field}
                           className="cosmic-input placeholder-gray-400"
                           style={{ color: 'white', backgroundColor: 'rgba(13, 22, 35, 0.8)' }}

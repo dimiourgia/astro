@@ -21,7 +21,7 @@ export async function generateBirthChart(
     const time = unknownBirthTime ? '11:00' : birthTime;
     
     const args = [pythonScript, dateOfBirth, time, birthLocation];
-    const pythonProcess = spawn('python3.11', args);
+    const pythonProcess = spawn('lython', args);
     
     let dataString = '';
     let errorString = '';
